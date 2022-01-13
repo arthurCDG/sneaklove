@@ -6,15 +6,17 @@
   {{#if msg}}
   <p class="message {{msg.status}}">{{msg.text}}</p>
   {{/if}}
-  {{> flash_message}}
+
   <form method="post" action="/auth/signin" id="form_user">
+    {{> flash_message}}
     <div class="form-item-wrapper flexed-item">
       <label for="email" class="label-ref label">Email</label>
-      <input id="email" type="email" class="input-text input" placeholder="albert.biceps@gmail.com" required name="email">
+      <input id="email" type="email" class="input-text input" placeholder="albert.biceps@gmail.com" required
+        name="email">
     </div>
     <div class="form-item-wrapper flexed-item">
       <label for="password" class="label-ref label">Password</label>
-      <input id="password" type="password"  class="input-text input" placeholder="••••••" required name="password">
+      <input id="password" type="password" class="input-text input" placeholder="••••••" required name="password">
     </div>
     <button class="button-primary white">Log in !</button>
   </form>
