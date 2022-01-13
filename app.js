@@ -14,7 +14,7 @@ const session = require("express-session");
 const MongoStore = require("connect-mongo")(session);
 const dev_mode = false;
 const logger = require("morgan");
-const path = require('path');
+const path = require("path");
 
 // config logger (pour debug)
 app.use(logger("dev"));
@@ -61,7 +61,6 @@ app.use(require("./middlewares/exposeFlashMessage")); // affiche les messages da
 app.use("/", require("./routes/index"));
 app.use("/auth", require("./routes/auth"));
 app.use("/dashboard", require("./routes/dashboard_sneaker"));
-app.use("/sneakers", require("./routes/sneakers"))
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

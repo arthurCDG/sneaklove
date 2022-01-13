@@ -2,19 +2,19 @@ const express = require("express");
 const router = express.Router();
 
 router.get("/", (req, res) => {
-     res.render("index");
+  res.render("index");
+});
+
+router.get("/home", (req, res) => {
+  res.render("index");
+});
+
+router.get("/sneakers/:category", (req, res) => {
+  res.render(`category/${req.params.category}`);
 });
 
 router.get("/one-product/:id", (req, res) => {
-     res.send("baz");
-});
-
-router.get("/signup", (req, res) => {
-     res.send("sneak");
-});
-
-router.get("/signin", (req, res) => {
-     res.send("love");
+  res.send("baz");
 });
 
 module.exports = router;

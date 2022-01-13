@@ -1,36 +1,35 @@
-@import './reset.css';
-@import './header-nav.css';
-@import './footer.css';
-@import './form.css';
-@import './button.css';
-@import './products.css';
-@import './products-forms.css';
-@import './products-manage.css';
-@import './login-signup.css';
-@import './one-product.css';
-@import './home.css';
+@import "./reset.css";
+@import "./header-nav.css";
+@import "./footer.css";
+@import "./form.css";
+@import "./button.css";
+@import "./products.css";
+@import "./products-forms.css";
+@import "./products-manage.css";
+@import "./login-signup.css";
+@import "./one-product.css";
+@import "./home.css";
 
-
-@import url('https://fonts.googleapis.com/css?family=Faster+One|Oswald:300,400,500,700|Source+Sans+Pro:300,400,600,700&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Faster+One|Oswald:300,400,500,700|Source+Sans+Pro:300,400,600,700&display=swap");
 
 * {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 body {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   display: flex;
   flex-direction: column;
 }
 
-h1{
-  font-family: 'Source Sans Pro', sans-serif;
+h1 {
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 h2,
 h3,
 h4 {
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   text-transform: uppercase;
 }
 
@@ -45,4 +44,26 @@ h4 {
 
 .flexed-item {
   display: flex;
+}
+
+.msg {
+  padding: 10px 20px;
+}
+
+.msg.error {
+  color: #802b31;
+  background: #f8d6da;
+  box-shadow: -0.3px 0.1px 2.4px 0.1px #802b31;
+}
+
+.msg.success {
+  color: #216136;
+  background: #d4edda;
+  box-shadow: -0.3px 0.1px 2.4px 0.1px #216136;
+}
+
+.msg.warning {
+  color: #856404;
+  background-color: #fff3cd;
+  border-color: #ffeeba;
 }
