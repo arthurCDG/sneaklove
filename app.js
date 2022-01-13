@@ -58,6 +58,8 @@ app.use(require("./middlewares/exposeFlashMessage")); // affiche les messages da
 
 // routers
 app.use("/", require("./routes/index"));
+app.use("/auth", require("./routes/auth"));
+app.use("/dashboard", require("./routes/dashboard_sneaker"));
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
