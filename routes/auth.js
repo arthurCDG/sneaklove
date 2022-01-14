@@ -4,6 +4,18 @@ const bcrypt = require("bcrypt");
 const SALT = 10;
 const UserModel = require("./../models/User");
 
+
+router.get("/logout", (req, res) => {
+    req.session.destroy(function (err) {
+        // cannot access session here anymore
+        // console.log(req.session.currentUser);
+        res.redirect("/")
+    })
+});
+
+
+router.use(require("./../middlewares/protecAuthRoute"));
+
 router.get("/signup", (req, res) => {
     res.render("auth/signup");
 });

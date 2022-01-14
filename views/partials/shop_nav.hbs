@@ -1,7 +1,6 @@
+{{!-- HEADER --}}
 
-  {{!-- HEADER --}}
-
-  {{!-- END HEADER --}}
+{{!-- END HEADER --}}
 <div class="big-container">
   <header class="header">
     <nav class="nav-wrapper flexed-item">
@@ -27,22 +26,22 @@
           </li>
           {{#if isLoggedIn}}
           <li class="nav-item animated-link nav-item-admin">
-            <a href="/prod-add">Add product</a>
+            <a href="/dashboard/create">Add product</a>
           </li>
-           <li class="nav-item animated-link nav-item-admin">
-            <a href="/prod-manage">Manage products</a>
+          <li class="nav-item animated-link nav-item-admin">
+            <a href="/dashboard">Manage products</a>
           </li>
           {{/if}}
         </ul>
       </div>
       <div class="flexed-item nav-end">
         {{#unless isLoggedIn}}
-        <a  href="/auth/signup" id="nav_login" class="button-ternary flexed-item nav-end-item">
+        <a href="/auth/signin" id="nav_login" class="button-ternary flexed-item nav-end-item">
           <span class="btn-text">Sign in</span>
         </a>
         {{/unless}}
         {{#if isLoggedIn}}
-        <a  href="/auth/logout" id="nav_logout" class="button-ternary flexed-item nav-end-item">
+        <a href="/auth/logout" id="nav_logout" class="button-ternary flexed-item nav-end-item">
           <span class="btn-text">Log out</span>
         </a>
         {{/if}}
